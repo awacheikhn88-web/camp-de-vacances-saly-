@@ -1,19 +1,14 @@
 <!DOCTYPE html>
-
 <html lang="fr">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="theme-color" content="#4B2E83">
+<title>Impulsion 26 — EEDS District de Rufisque</title>
 
-<title>⚜️ Impulsion 26 — Camp de vacances EEDS</title>
+<meta name="description" content="Camp de vacances Impulsion 26 — EEDS District de Rufisque">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -21,837 +16,628 @@
 <style>
 
 :root{
-
   --ink:#211935;
-
   --purple:#4B2E83;
-
   --deep:#2F1D57;
-
   --gold:#E8AC1E;
-
   --cream:#FAF6ED;
-
-  --white:#fff;
-
-  --muted:#746c82;
-
-  --line:#e8e0d2;
-
+  --white:#ffffff;
+  --light:#f5f0ff;
+  --border:#e7def5;
+  --green:#198754;
 }
 
 *{
-
   box-sizing:border-box;
-
+  margin:0;
+  padding:0;
 }
 
 html{
-
   scroll-behavior:smooth;
-
 }
 
 body{
-
-  margin:0;
-
+  font-family:"Work Sans",sans-serif;
   background:var(--cream);
-
   color:var(--ink);
-
-  font-family:"Work Sans",Arial,sans-serif;
-
+  line-height:1.6;
 }
 
-button,a{
-
-  font:inherit;
-
-}
-
+button,
 a{
+  font-family:inherit;
+}
 
-  text-decoration:none;
+button{
+  cursor:pointer;
+}
 
-  color:inherit;
-
+img{
+  max-width:100%;
 }
 
 /* ================= HEADER ================= */
 
 header{
-
+  background:var(--deep);
+  color:white;
   position:sticky;
-
   top:0;
-
-  z-index:50;
-
-  background:rgba(255,255,255,.96);
-
-  backdrop-filter:blur(12px);
-
-  border-bottom:1px solid var(--line);
-
+  z-index:1000;
+  box-shadow:0 5px 20px rgba(0,0,0,.15);
 }
 
-.nav{
-
-  max-width:1180px;
-
+.header-inner{
+  max-width:1200px;
   margin:auto;
-
   padding:12px 20px;
-
   display:flex;
-
   align-items:center;
-
   justify-content:space-between;
-
-  gap:18px;
-
+  gap:20px;
 }
 
-.brand{
-
+.logo-area{
   display:flex;
-
   align-items:center;
-
-  gap:14px;
-
-  min-width:0;
-
+  gap:15px;
 }
 
-.logo{
-
-  width:82px;
-
-  height:82px;
-
+.logo-area img{
+  width:72px;
+  height:72px;
   object-fit:contain;
-
-  flex:none;
-
+  background:white;
+  border-radius:50%;
+  padding:5px;
 }
 
-.brand h1{
+.logo-text{
+  line-height:1.2;
+}
 
-  margin:0;
-
+.logo-title{
   font-family:"Space Grotesk",sans-serif;
-
-  font-size:1.2rem;
-
-  line-height:1.05;
-
-}
-
-.brand p{
-
-  margin:5px 0 0;
-
-  color:var(--purple);
-
+  font-size:1.35rem;
   font-weight:700;
-
-  font-size:.9rem;
-
 }
 
-.nav-btn{
+.logo-subtitle{
+  font-size:.95rem;
+  font-weight:600;
+  color:#eee5ff;
+  margin-top:4px;
+}
 
+nav{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+nav button{
   border:0;
+  background:transparent;
+  color:white;
+  padding:10px 13px;
+  border-radius:10px;
+  font-weight:600;
+}
 
-  background:var(--purple);
+nav button:hover{
+  background:rgba(255,255,255,.1);
+}
 
-  color:#fff;
-
-  padding:10px 15px;
-
-  border-radius:12px;
-
-  cursor:pointer;
-
-  font-weight:700;
-
+.nav-recen{
+  background:var(--gold)!important;
+  color:var(--deep)!important;
 }
 
 /* ================= HERO ================= */
 
 .hero{
-
   background:
-
-    radial-gradient(
-
-      circle at 80% 20%,
-
-      rgba(232,172,30,.24),
-
-      transparent 28%
-
-    ),
-
+    radial-gradient(circle at top right,rgba(232,172,30,.25),transparent 30%),
     linear-gradient(135deg,var(--deep),var(--purple));
-
-  color:#fff;
-
-  padding:58px 20px 64px;
-
+  color:white;
+  padding:75px 20px 85px;
 }
 
-.hero-inner{
-
-  max-width:1180px;
-
+.hero-content{
+  max-width:1200px;
   margin:auto;
-
-}
-
-.eyebrow{
-
-  display:inline-block;
-
-  padding:7px 12px;
-
-  border:1px solid rgba(255,255,255,.25);
-
-  border-radius:999px;
-
-  background:rgba(255,255,255,.08);
-
-  font-size:.85rem;
-
-  font-weight:700;
-
-}
-
-.hero h2{
-
-  font-family:"Space Grotesk",sans-serif;
-
-  font-size:clamp(2.5rem,7vw,5.5rem);
-
-  line-height:.95;
-
-  margin:18px 0 12px;
-
-}
-
-.hero p{
-
-  max-width:720px;
-
-  margin:0;
-
-  font-size:1.08rem;
-
-  line-height:1.7;
-
-  color:#eee9f8;
-
-}
-
-.hero-actions{
-
-  margin-top:25px;
-
-  display:flex;
-
-  gap:12px;
-
-  flex-wrap:wrap;
-
-}
-
-.btn{
-
-  display:inline-flex;
-
-  align-items:center;
-
-  justify-content:center;
-
-  gap:8px;
-
-  border:0;
-
-  border-radius:12px;
-
-  padding:12px 17px;
-
-  font-weight:700;
-
-  cursor:pointer;
-
-}
-
-.btn-gold{
-
-  background:var(--gold);
-
-  color:var(--ink);
-
-}
-
-.btn-light{
-
-  background:#fff;
-
-  color:var(--purple);
-
-}
-
-/* ================= MAIN ================= */
-
-main{
-
-  max-width:1180px;
-
-  margin:auto;
-
-  padding:35px 20px 70px;
-
-}
-
-.section-title{
-
-  display:flex;
-
-  justify-content:space-between;
-
-  align-items:end;
-
-  gap:20px;
-
-  margin:0 0 20px;
-
-}
-
-.section-title h3{
-
-  margin:0;
-
-  font-family:"Space Grotesk",sans-serif;
-
-  font-size:1.8rem;
-
-}
-
-.section-title p{
-
-  margin:5px 0 0;
-
-  color:var(--muted);
-
-}
-
-/* ================= JOURS ================= */
-
-.days{
-
-  display:grid;
-
-  grid-template-columns:repeat(3,1fr);
-
-  gap:16px;
-
-}
-
-.day-card{
-
-  background:#fff;
-
-  border:1px solid var(--line);
-
-  border-radius:18px;
-
-  padding:20px;
-
-  box-shadow:0 8px 25px rgba(47,29,87,.06);
-
-  cursor:pointer;
-
-  transition:.2s ease;
-
-}
-
-.day-card:hover{
-
-  transform:translateY(-3px);
-
-  box-shadow:0 12px 30px rgba(47,29,87,.12);
-
-}
-
-.day-number{
-
-  display:inline-flex;
-
-  width:42px;
-
-  height:42px;
-
-  align-items:center;
-
-  justify-content:center;
-
-  border-radius:12px;
-
-  background:#f0eafb;
-
-  color:var(--purple);
-
-  font-weight:800;
-
-}
-
-.day-card h4{
-
-  margin:14px 0 5px;
-
-  font-family:"Space Grotesk",sans-serif;
-
-  font-size:1.1rem;
-
-}
-
-.day-card .date{
-
-  font-weight:700;
-
-  color:var(--purple);
-
-}
-
-.day-card .preview{
-
-  color:var(--muted);
-
-  font-size:.9rem;
-
-  line-height:1.5;
-
-  margin-top:10px;
-
+  text-align:center;
 }
 
 .badge{
-
   display:inline-block;
-
-  margin-top:12px;
-
-  padding:5px 9px;
-
-  border-radius:999px;
-
-  background:#fff5d9;
-
-  color:#8a6200;
-
-  font-size:.78rem;
-
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.2);
+  padding:8px 16px;
+  border-radius:30px;
+  font-size:.85rem;
   font-weight:700;
-
+  margin-bottom:20px;
 }
 
-/* ================= PAGES ================= */
-
-.page{
-
-  display:none;
-
-}
-
-.page.active{
-
-  display:block;
-
-}
-
-.back{
-
-  display:inline-flex;
-
-  align-items:center;
-
-  gap:7px;
-
-  margin-bottom:18px;
-
-  color:var(--purple);
-
-  font-weight:800;
-
-  cursor:pointer;
-
-  border:0;
-
-  background:none;
-
-  padding:0;
-
-}
-
-/* ================= JOUR ================= */
-
-.day-head{
-
-  background:#fff;
-
-  border:1px solid var(--line);
-
-  border-radius:20px;
-
-  padding:25px;
-
-  margin-bottom:18px;
-
-}
-
-.day-head h3{
-
-  margin:0;
-
+.hero h1{
   font-family:"Space Grotesk",sans-serif;
-
-  font-size:clamp(1.8rem,4vw,2.8rem);
-
+  font-size:clamp(3rem,8vw,6rem);
+  line-height:.95;
+  margin-bottom:20px;
 }
 
-.day-head p{
-
-  color:var(--muted);
-
-  margin:7px 0 0;
-
+.hero h1 span{
+  color:var(--gold);
 }
 
-/* ================= ACTIVITES ================= */
+.hero p{
+  max-width:750px;
+  margin:auto;
+  font-size:1.15rem;
+  color:#f1ebff;
+}
 
-.timeline{
+.hero-buttons{
+  margin-top:30px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+}
 
+.btn{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  gap:8px;
+  padding:13px 20px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:700;
+  border:0;
+  transition:.2s ease;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.btn-primary{
+  background:var(--gold);
+  color:var(--deep);
+}
+
+.btn-light{
+  background:white;
+  color:var(--purple);
+}
+
+/* ================= SECTIONS ================= */
+
+section{
+  padding:55px 20px;
+}
+
+.container{
+  max-width:1200px;
+  margin:auto;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:35px;
+}
+
+.section-title h2{
+  font-family:"Space Grotesk",sans-serif;
+  font-size:2rem;
+  color:var(--deep);
+}
+
+.section-title p{
+  color:#6d657c;
+  margin-top:6px;
+}
+
+/* ================= RECO ================= */
+
+.recen-section{
+  background:white;
+}
+
+.recen-card{
+  max-width:850px;
+  margin:auto;
+  background:linear-gradient(135deg,#f5efff,#fff);
+  border:2px solid var(--border);
+  border-radius:24px;
+  padding:35px 25px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(47,29,87,.08);
+}
+
+.recen-icon{
+  font-size:3rem;
+  margin-bottom:10px;
+}
+
+.recen-card h3{
+  font-family:"Space Grotesk",sans-serif;
+  color:var(--deep);
+  font-size:1.7rem;
+}
+
+.recen-card p{
+  max-width:650px;
+  margin:10px auto 22px;
+  color:#625b70;
+}
+
+.recen-button{
+  background:var(--purple);
+  color:white;
+}
+
+/* ================= DAYS ================= */
+
+.days-grid{
   display:grid;
-
-  gap:14px;
-
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
 }
 
-.activity{
-
-  background:#fff;
-
-  border:1px solid var(--line);
-
+.day-card{
+  background:white;
+  border:1px solid var(--border);
   border-radius:18px;
+  padding:22px;
+  cursor:pointer;
+  transition:.25s ease;
+  box-shadow:0 5px 18px rgba(33,25,53,.05);
+}
 
-  padding:18px;
+.day-card:hover{
+  transform:translateY(-5px);
+  border-color:var(--purple);
+  box-shadow:0 12px 30px rgba(75,46,131,.12);
+}
 
-  display:grid;
+.day-number{
+  width:42px;
+  height:42px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:12px;
+  background:var(--purple);
+  color:white;
+  font-weight:700;
+  margin-bottom:15px;
+}
 
-  grid-template-columns:150px 1fr;
+.day-card h3{
+  font-family:"Space Grotesk",sans-serif;
+  font-size:1.15rem;
+}
 
-  gap:20px;
+.day-card p{
+  color:#756d80;
+  margin-top:5px;
+  font-size:.92rem;
+}
 
+.day-arrow{
+  display:block;
+  color:var(--purple);
+  font-weight:700;
+  margin-top:15px;
+  font-size:.85rem;
+}
+
+/* ================= PROGRAMME ================= */
+
+#programme{
+  background:#f5f0ff;
+  display:none;
+}
+
+.programme-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:15px;
+  margin-bottom:30px;
+}
+
+.programme-header h2{
+  font-family:"Space Grotesk",sans-serif;
+  color:var(--deep);
+}
+
+.back-btn{
+  border:0;
+  background:white;
+  color:var(--purple);
+  border:1px solid var(--border);
+  padding:10px 15px;
+  border-radius:10px;
+  font-weight:700;
 }
 
 .period{
-
-  color:var(--purple);
-
-  font-weight:800;
-
-  font-size:.95rem;
-
+  margin-bottom:25px;
 }
 
-.period small{
-
-  display:block;
-
-  color:var(--muted);
-
-  margin-top:4px;
-
-  font-weight:600;
-
-}
-
-.activity h4{
-
-  margin:0 0 10px;
-
+.period-title{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:12px;
   font-family:"Space Grotesk",sans-serif;
-
+  color:var(--deep);
 }
 
-.items{
+.period-title span{
+  background:var(--gold);
+  color:var(--deep);
+  padding:5px 10px;
+  border-radius:8px;
+  font-size:.8rem;
+}
 
+.activities{
   display:grid;
-
-  gap:9px;
-
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
 }
 
-.item{
-
-  border-left:4px solid var(--gold);
-
-  padding:9px 12px;
-
-  background:#fcfaf5;
-
-  border-radius:0 10px 10px 0;
-
-}
-
-.item strong{
-
+.activity{
   display:block;
+  text-decoration:none;
+  color:inherit;
+  background:white;
+  border:1px solid var(--border);
+  border-left:5px solid var(--purple);
+  border-radius:13px;
+  padding:16px;
+  transition:.2s ease;
+  cursor:pointer;
+}
 
+.activity:hover{
+  background:#f8f3ff;
+  transform:translateX(4px);
+  border-color:var(--purple);
+}
+
+.activity strong{
+  display:block;
+  font-size:1rem;
+  color:var(--deep);
 }
 
 .responsable{
+  margin-top:5px;
+  font-size:.82rem;
+  color:#71697c;
+}
 
-  color:var(--muted);
-
-  font-size:.88rem;
-
-  margin-top:2px;
-
+.click-hint{
+  display:block;
+  margin-top:9px;
+  color:var(--purple);
+  font-size:.78rem;
+  font-weight:700;
 }
 
 /* ================= ALBUM ================= */
 
-.media-btn{
+.album-box{
+  margin-top:30px;
+  background:white;
+  border:2px solid var(--border);
+  border-radius:20px;
+  padding:25px;
+  text-align:center;
+}
 
-  display:inline-flex;
+.album-box h3{
+  color:var(--deep);
+  font-family:"Space Grotesk",sans-serif;
+}
 
-  margin-top:12px;
+.album-box p{
+  color:#6e6778;
+  margin:6px 0 18px;
+}
 
+.album-btn{
   background:var(--purple);
-
-  color:#fff;
-
-  padding:9px 12px;
-
-  border-radius:10px;
-
-  font-weight:700;
-
-  font-size:.88rem;
-
+  color:white;
 }
 
-.media-btn:hover{
-
-  background:var(--deep);
-
-}
-
-/* ================= INFOS ================= */
+/* ================= INFO ================= */
 
 .info-grid{
-
   display:grid;
-
   grid-template-columns:repeat(3,1fr);
-
-  gap:16px;
-
-  margin-top:25px;
-
+  gap:18px;
 }
 
-.info-box{
-
-  background:#fff;
-
-  border:1px solid var(--line);
-
+.info-card{
+  background:white;
+  border:1px solid var(--border);
   border-radius:18px;
-
-  padding:20px;
-
+  padding:22px;
 }
 
-.info-box h4{
-
-  margin:0 0 12px;
-
+.info-card h3{
   font-family:"Space Grotesk",sans-serif;
-
+  color:var(--deep);
+  margin-bottom:12px;
 }
 
-.info-box ul{
-
-  margin:0;
-
-  padding-left:20px;
-
-  line-height:1.8;
-
+.info-card ul{
+  list-style:none;
 }
 
-.info-box table{
+.info-card li{
+  padding:7px 0;
+  border-bottom:1px solid #eee8f4;
+}
 
+.info-card li:last-child{
+  border-bottom:0;
+}
+
+/* ================= CHRONOGRAMME ================= */
+
+.table-wrap{
+  overflow-x:auto;
+  background:white;
+  border-radius:18px;
+  border:1px solid var(--border);
+}
+
+table{
   width:100%;
-
   border-collapse:collapse;
-
+  min-width:600px;
 }
 
-.info-box td{
-
-  padding:7px 4px;
-
-  border-bottom:1px solid var(--line);
-
+th,
+td{
+  padding:14px;
+  border-bottom:1px solid #eee8f4;
+  text-align:left;
 }
 
-.info-box td:last-child{
-
-  text-align:right;
-
-  font-weight:700;
-
+th{
+  background:var(--deep);
+  color:white;
 }
 
-.notice{
-
-  background:#fff8df;
-
-  border:1px solid #f0d58a;
-
-  border-radius:16px;
-
-  padding:15px 17px;
-
-  margin:18px 0;
-
-  line-height:1.6;
-
+tr:last-child td{
+  border-bottom:0;
 }
 
 /* ================= FOOTER ================= */
 
 footer{
-
   background:var(--deep);
-
-  color:#fff;
-
+  color:white;
   text-align:center;
+  padding:35px 20px;
+}
 
-  padding:28px 20px;
-
+footer strong{
+  color:var(--gold);
 }
 
 footer p{
-
-  margin:5px 0;
-
-  color:#dcd5e9;
-
+  margin-top:5px;
+  color:#dcd3eb;
 }
 
 /* ================= RESPONSIVE ================= */
 
 @media(max-width:900px){
 
-  .days{
-
+  .days-grid{
     grid-template-columns:repeat(2,1fr);
-
   }
 
   .info-grid{
-
     grid-template-columns:1fr;
-
   }
 
 }
 
 @media(max-width:650px){
 
-  .nav{
-
-    padding:9px 12px;
-
+  .header-inner{
+    flex-direction:column;
+    padding:12px;
   }
 
-  .logo{
-
-    width:65px;
-
-    height:65px;
-
+  nav{
+    width:100%;
+    justify-content:center;
+    flex-wrap:wrap;
   }
 
-  .brand h1{
-
-    font-size:1rem;
-
-  }
-
-  .brand p{
-
-    font-size:.75rem;
-
-  }
-
-  .nav-btn{
-
-    padding:8px 10px;
-
+  nav button{
     font-size:.8rem;
+  }
 
+  .logo-area{
+    width:100%;
+    justify-content:center;
+  }
+
+  .logo-area img{
+    width:60px;
+    height:60px;
+  }
+
+  .logo-title{
+    font-size:1.1rem;
+  }
+
+  .logo-subtitle{
+    font-size:.8rem;
   }
 
   .hero{
-
-    padding:45px 18px 50px;
-
+    padding:55px 15px 65px;
   }
 
-  main{
-
-    padding:28px 14px 55px;
-
+  .hero h1{
+    font-size:3.5rem;
   }
 
-  .days{
+  section{
+    padding:40px 15px;
+  }
 
+  .days-grid{
     grid-template-columns:1fr;
-
   }
 
-  .activity{
-
+  .activities{
     grid-template-columns:1fr;
-
-    gap:9px;
-
   }
 
-  .period{
-
-    border-bottom:1px solid var(--line);
-
-    padding-bottom:8px;
-
+  .programme-header{
+    flex-direction:column;
+    align-items:flex-start;
   }
 
 }
 
-</style>
+/* ================= TOAST ================= */
 
+.toast{
+  position:fixed;
+  left:50%;
+  bottom:25px;
+  transform:translate(-50%,120px);
+  background:var(--deep);
+  color:white;
+  padding:13px 18px;
+  border-radius:12px;
+  z-index:2000;
+  transition:.3s ease;
+  box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+.toast.show{
+  transform:translate(-50%,0);
+}
+
+</style>
 </head>
 
 <body>
@@ -860,100 +646,74 @@ footer p{
 
 <header>
 
-  <div class="nav">
+  <div class="header-inner">
 
-    <div class="brand">
+    <div class="logo-area">
 
-      <!-- Mets ton logo dans GitHub sous le nom image.png -->
+      <!-- Mets ici le nom exact de ton fichier logo -->
+      <img src="image.png" alt="Logo EEDS District de Rufisque">
 
-      <img
+      <div class="logo-text">
 
-        class="logo"
+        <div class="logo-title">
+          ⚜️ IMPULSION 26
+        </div>
 
-        src="image.png"
-
-        alt="Logo Éclaireurs du Sénégal"
-
-      >
-
-      <div>
-
-        <h1>⚜️ Impulsion 26</h1>
-
-        <p>
-
+        <div class="logo-subtitle">
           EEDS · DISTRICT DE RUFISQUE
-
-        </p>
+        </div>
 
       </div>
 
     </div>
 
-    <button
+    <nav>
 
-      class="nav-btn"
+      <button onclick="goHome()">
+        Accueil
+      </button>
 
-      onclick="showHome()"
+      <button onclick="scrollToDays()">
+        Programme
+      </button>
 
-    >
+      <button class="nav-recen" onclick="openRecensement()">
+        📝 Recensement
+      </button>
 
-      Programme
-
-    </button>
+    </nav>
 
   </div>
 
 </header>
 
+
 <!-- ================= HERO ================= -->
 
 <section class="hero">
 
-  <div class="hero-inner">
+  <div class="hero-content">
 
-    <span class="eyebrow">
-
+    <div class="badge">
       CAMP DE VACANCES 2026 · SALY / MBOUR
+    </div>
 
-    </span>
-
-    <h2>
-
-      Impulsion 26
-
-    </h2>
+    <h1>
+      IMPULSION <span>26</span>
+    </h1>
 
     <p>
-
-      JOJ &amp; Tech : Cap sur l'impact communautaire
-
+      JOJ & Tech : Cap sur l'impact communautaire
     </p>
 
-    <div class="hero-actions">
+    <div class="hero-buttons">
 
-      <button
-
-        class="btn btn-gold"
-
-        onclick="document.getElementById('programme').scrollIntoView({behavior:'smooth'})"
-
-      >
-
+      <button class="btn btn-primary" onclick="scrollToDays()">
         📅 Voir le programme
-
       </button>
 
-      <button
-
-        class="btn btn-light"
-
-        onclick="document.getElementById('infos').scrollIntoView({behavior:'smooth'})"
-
-      >
-
-        ℹ️ Infos du camp
-
+      <button class="btn btn-light" onclick="openRecensement()">
+        📝 Faire mon recensement
       </button>
 
     </div>
@@ -962,1910 +722,1174 @@ footer p{
 
 </section>
 
-<!-- ================= CONTENU ================= -->
 
-<main>
+<!-- ================= RECENSEMENT ================= -->
 
-<section
+<section class="recen-section" id="recensement">
 
-  id="programme"
+  <div class="container">
 
-  class="page active"
+    <div class="section-title">
 
->
-
-  <div class="section-title">
-
-    <div>
-
-      <h3>
-
-        Programme du camp
-
-      </h3>
+      <h2>📝 Recensement des participants</h2>
 
       <p>
-
-        Du dimanche 06 au mercredi 16 septembre 2026
-
+        Merci de renseigner vos informations pour faciliter l'organisation du camp.
       </p>
 
     </div>
 
-  </div>
 
-  <div class="notice">
-
-    <strong>
-
-      📸 Photos &amp; vidéos :
-
-    </strong>
-
-    Chaque journée peut ouvrir son album Google Photos.
-
-    <br>
-
-    Pour permettre aux participants d'ajouter des contenus,
-
-    l'option <strong>Collaborer</strong> doit être activée
-
-    dans l'album partagé.
-
-  </div>
-
-  <!-- LES JOURS SERONT GENERES AUTOMATIQUEMENT -->
-
-  <div
-
-    id="days"
-
-    class="days"
-
-  ></div>
-
-  <!-- ================= INFOS ================= -->
-
-  <div
-
-    id="infos"
-
-    class="info-grid"
-
-  >
-
-    <!-- CHRONOGRAMME -->
-
-    <div class="info-box">
-
-      <h4>
-
-        ⏰ Chronogramme quotidien
-
-      </h4>
-
-      <table>
-
-        <tr>
-
-          <td>07h00</td>
-
-          <td>Réveil</td>
-
-        </tr>
-
-        <tr>
-
-          <td>07h30–08h00</td>
-
-          <td>Dérouillage</td>
-
-        </tr>
-
-        <tr>
-
-          <td>08h15–09h00</td>
-
-          <td>Rassemblement</td>
-
-        </tr>
-
-        <tr>
-
-          <td>09h00–10h00</td>
-
-          <td>Petit déjeuner</td>
-
-        </tr>
-
-        <tr>
-
-          <td>10h00–11h00</td>
-
-          <td>Corvée</td>
-
-        </tr>
-
-        <tr>
-
-          <td>11h00–13h30</td>
-
-          <td>Activité 1</td>
-
-        </tr>
-
-        <tr>
-
-          <td>13h30–15h30</td>
-
-          <td>Pause prière · Déjeuner · Sieste</td>
-
-        </tr>
-
-        <tr>
-
-          <td>15h30–17h00</td>
-
-          <td>Activité 2</td>
-
-        </tr>
-
-        <tr>
-
-          <td>17h00–17h30</td>
-
-          <td>Pause prière</td>
-
-        </tr>
-
-        <tr>
-
-          <td>17h30–18h00</td>
-
-          <td>Scout Time · Envolée</td>
-
-        </tr>
-
-        <tr>
-
-          <td>18h00–20h30</td>
-
-          <td>Pause · Pause prière</td>
-
-        </tr>
-
-        <tr>
-
-          <td>20h30–21h00</td>
-
-          <td>Dîner</td>
-
-        </tr>
-
-        <tr>
-
-          <td>21h00–23h00</td>
-
-          <td>Veillée</td>
-
-        </tr>
-
-        <tr>
-
-          <td>23h15</td>
-
-          <td>Couvre-feu</td>
-
-        </tr>
-
-      </table>
+    <div class="recen-card">
+
+      <div class="recen-icon">
+        📋
+      </div>
+
+      <h3>
+        Recensement Impulsion 26
+      </h3>
+
+      <p>
+        Chaque participant est invité à remplir le formulaire
+        avec ses informations personnelles, sa branche,
+        ses coordonnées et sa suggestion de lieu pour le prochain
+        camp de vacances.
+      </p>
+
+      <a
+        href="https://forms.gle/V5NkMZ98bNjZKRbH8"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn recen-button"
+      >
+        📝 REMPLIR LE FORMULAIRE
+      </a>
 
     </div>
-
-    <!-- VEILLEE CULTURELLE -->
-
-    <div class="info-box">
-
-      <h4>
-
-        🎭 Veillée culturelle
-
-      </h4>
-
-      <table>
-
-        <tr>
-
-          <td>Jaunes</td>
-
-          <td>Pulaar</td>
-
-        </tr>
-
-        <tr>
-
-          <td>Vertes filles</td>
-
-          <td>Sérére</td>
-
-        </tr>
-
-        <tr>
-
-          <td>Vertes garçon</td>
-
-          <td>Zoulou</td>
-
-        </tr>
-
-        <tr>
-
-          <td>Blanches</td>
-
-          <td>Lébou</td>
-
-        </tr>
-
-        <tr>
-
-          <td>Rouges</td>
-
-          <td>Socé</td>
-
-        </tr>
-
-      </table>
-
-    </div>
-
-    <!-- TENUES -->
-
-    <div class="info-box">
-
-      <h4>
-
-        👕 Habits à préparer
-
-      </h4>
-
-      <ul>
-
-        <li>
-
-          T-shirt blanc pour la fête des couleurs.
-
-        </li>
-
-        <li>
-
-          Tenue année 2000 — pas de crop top pour les filles.
-
-        </li>
-
-        <li>
-
-          Tenue culturelle selon l’ethnie attribuée
-
-          à la branche.
-
-        </li>
-
-      </ul>
-
-    </div>
-
-  </div>
-
-  <!-- ================= ANIMATEURS ================= -->
-
-  <div
-
-    class="info-box"
-
-    style="margin-top:16px"
-
-  >
-
-    <h4>
-
-      📣 Animateurs Envolée &amp; Scout Time
-
-    </h4>
-
-    <table>
-
-      <tr>
-
-        <td>Lundi 07</td>
-
-        <td>Momo SOW · Doudou</td>
-
-      </tr>
-
-      <tr>
-
-        <td>Mardi 08</td>
-
-        <td>Pape Mar · Amina</td>
-
-      </tr>
-
-      <tr>
-
-        <td>Mercredi 09</td>
-
-        <td>Amadou · Sagna</td>
-
-      </tr>
-
-      <tr>
-
-        <td>Jeudi 10</td>
-
-        <td>Yacine · X</td>
-
-      </tr>
-
-      <tr>
-
-        <td>Vendredi 11</td>
-
-        <td>Sagna · Woly</td>
-
-      </tr>
-
-      <tr>
-
-        <td>Samedi 12</td>
-
-        <td>Astou Mboup · Sadio</td>
-
-      </tr>
-
-      <tr>
-
-        <td>Dimanche 13</td>
-
-        <td>Mame Diarra · Mamy</td>
-
-      </tr>
-
-      <tr>
-
-        <td>Lundi 14</td>
-
-        <td>Mamy DIOP · Mame Bou</td>
-
-      </tr>
-
-      <tr>
-
-        <td>Mardi 15</td>
-
-        <td>Mame Fatou · Rone</td>
-
-      </tr>
-
-    </table>
 
   </div>
 
 </section>
 
-<!-- ================= PAGE JOUR ================= -->
 
-<section
+<!-- ================= JOURS ================= -->
 
-  id="dayPage"
+<section id="jours">
 
-  class="page"
+  <div class="container">
 
->
+    <div class="section-title">
 
-  <button
+      <h2>📅 Programme du camp</h2>
 
-    class="back"
+      <p>
+        Cliquez sur un jour pour découvrir son programme.
+      </p>
 
-    onclick="showHome()"
+    </div>
 
-  >
+    <div class="days-grid" id="daysGrid"></div>
 
-    ← Retour au programme
-
-  </button>
-
-  <div id="dayContent"></div>
+  </div>
 
 </section>
 
-</main>
+
+<!-- ================= PROGRAMME DETAILLE ================= -->
+
+<section id="programme">
+
+  <div class="container">
+
+    <div class="programme-header">
+
+      <div>
+        <div style="color:var(--purple);font-size:.85rem;font-weight:700;">
+          PROGRAMME DU JOUR
+        </div>
+
+        <h2 id="programmeTitle"></h2>
+      </div>
+
+      <button class="back-btn" onclick="closeProgramme()">
+        ← Retour aux jours
+      </button>
+
+    </div>
+
+
+    <div id="programmeContent"></div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= CHRONOGRAMME ================= -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>🕐 Chronogramme quotidien</h2>
+
+      <p>
+        Organisation générale des journées du camp.
+      </p>
+
+    </div>
+
+
+    <div class="table-wrap">
+
+      <table>
+
+        <thead>
+
+          <tr>
+            <th>Heure</th>
+            <th>Activité</th>
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td>07h00</td>
+            <td>Réveil</td>
+          </tr>
+
+          <tr>
+            <td>07h30 – 08h00</td>
+            <td>Dérouillage</td>
+          </tr>
+
+          <tr>
+            <td>08h15 – 09h00</td>
+            <td>Rassemblement</td>
+          </tr>
+
+          <tr>
+            <td>09h00 – 10h00</td>
+            <td>Petit déjeuner</td>
+          </tr>
+
+          <tr>
+            <td>10h00 – 11h00</td>
+            <td>Corvée</td>
+          </tr>
+
+          <tr>
+            <td>11h00 – 13h30</td>
+            <td>Activité 1</td>
+          </tr>
+
+          <tr>
+            <td>13h30 – 15h30</td>
+            <td>Pause prière · Déjeuner · Sieste</td>
+          </tr>
+
+          <tr>
+            <td>15h30 – 17h00</td>
+            <td>Activité 2</td>
+          </tr>
+
+          <tr>
+            <td>17h00 – 17h30</td>
+            <td>Pause prière</td>
+          </tr>
+
+          <tr>
+            <td>17h30 – 18h00</td>
+            <td>Scout Time · Envolée</td>
+          </tr>
+
+          <tr>
+            <td>18h00 – 20h30</td>
+            <td>Pause · Pause prière</td>
+          </tr>
+
+          <tr>
+            <td>20h30 – 21h00</td>
+            <td>Dîner</td>
+          </tr>
+
+          <tr>
+            <td>21h00 – 23h00</td>
+            <td>Veillée</td>
+          </tr>
+
+          <tr>
+            <td>23h15</td>
+            <td>Couvre-feu</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= INFORMATIONS ================= -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <h2>⚜️ Informations utiles</h2>
+
+      <p>
+        Quelques informations à connaître pour le camp.
+      </p>
+
+    </div>
+
+
+    <div class="info-grid">
+
+
+      <!-- ENVOLEE -->
+
+      <div class="info-card">
+
+        <h3>🌅 Envolée & Scout Time</h3>
+
+        <ul>
+
+          <li>
+            <strong>Lundi 07 :</strong>
+            Momo SOW · Doudou
+          </li>
+
+          <li>
+            <strong>Mardi 08 :</strong>
+            Pape Mar · Amina
+          </li>
+
+          <li>
+            <strong>Mercredi 09 :</strong>
+            Amadou · Sagna
+          </li>
+
+          <li>
+            <strong>Jeudi 10 :</strong>
+            Yacine · X
+          </li>
+
+          <li>
+            <strong>Vendredi 11 :</strong>
+            Sagna · Woly
+          </li>
+
+          <li>
+            <strong>Samedi 12 :</strong>
+            Astou Mboup · Sadio
+          </li>
+
+          <li>
+            <strong>Dimanche 13 :</strong>
+            Mame Diarra · Mamy
+          </li>
+
+          <li>
+            <strong>Lundi 14 :</strong>
+            Mamy DIOP · Mame Bou
+          </li>
+
+          <li>
+            <strong>Mardi 15 :</strong>
+            Mame Fatou · Rone
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- ETHNIES -->
+
+      <div class="info-card">
+
+        <h3>🎨 Branches & ethnies</h3>
+
+        <ul>
+
+          <li>
+            🟡 <strong>Jaunes :</strong> Pulaar
+          </li>
+
+          <li>
+            🟢 <strong>Vertes filles :</strong> Sérére
+          </li>
+
+          <li>
+            🟢 <strong>Vertes garçons :</strong> Zoulou
+          </li>
+
+          <li>
+            ⚪ <strong>Blanches :</strong> Lébou
+          </li>
+
+          <li>
+            🔴 <strong>Rouges :</strong> Socé
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <!-- TENUES -->
+
+      <div class="info-card">
+
+        <h3>👕 Tenues à préparer</h3>
+
+        <ul>
+
+          <li>
+            ⚪ T-shirt blanc pour la fête des couleurs
+          </li>
+
+          <li>
+            🕺 Tenue année 2000
+          </li>
+
+          <li>
+            ⚠️ Pas de crop top pour les filles
+          </li>
+
+          <li>
+            🌍 Tenue culturelle selon l'ethnie attribuée
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
 
 <!-- ================= FOOTER ================= -->
 
 <footer>
 
-  <strong>
+  <div>
 
-    ⚜️ Impulsion 26
+    <strong>⚜️ IMPULSION 26</strong>
 
-  </strong>
+    <p>
+      EEDS · District de Rufisque
+    </p>
 
-  <p>
+    <p>
+      Camp de vacances 2026 · Saly / Mbour
+    </p>
 
-    Éclaireuses et Éclaireurs du Sénégal ·
+    <p style="margin-top:15px;font-size:.85rem;">
+      JOJ & Tech : Cap sur l'impact communautaire
+    </p>
 
-    District de Rufisque
-
-  </p>
-
-  <p>
-
-    Camp de vacances 2026 · Saly / Mbour
-
-  </p>
+  </div>
 
 </footer>
 
-<!-- ================= JAVASCRIPT ================= -->
+
+<div class="toast" id="toast"></div>
+
 
 <script>
 
-/*
+/* =====================================================
+   DONNÉES DU CAMP
+===================================================== */
 
-==========================================================
-
-PROGRAMME DU CAMP
-
-==========================================================
-
-*/
-
-const JOURS = [
-
-  /* ================= JOUR 1 ================= */
+const days = [
 
   {
-
     id:1,
-
     date:"Dimanche 06 septembre",
+    title:"Arrivée, installation et ouverture du camp",
 
-    short:"Dimanche 06",
-
-    resume:
-
-      "Arrivée, installation et veillée d’intégration.",
-
-    album:
-
-      "https://photos.app.goo.gl/JKB5vvmF6FJX8K7B9",
-
-    periodes:[
-
+    periods:[
       {
-
-        nom:"Matin",
-
-        activites:[
-
+        name:"Programme",
+        icon:"🏕️",
+        activities:[
           {
-
             titre:"Arrivée / Installation",
-
-            resp:"Popotier"
-
+            resp:"Popotier",
+            album:"https://photos.app.goo.gl/JKB5vvmF6FJX8K7B9"
           }
-
         ]
-
       },
-
       {
-
-        nom:"Après-midi",
-
-        activites:[
-
+        name:"Soir",
+        icon:"🌙",
+        activities:[
           {
-
-            titre:"Arrivée / Installation",
-
-            resp:"Popotier"
-
-          }
-
-        ]
-
-      },
-
-      {
-
-        nom:"Soir",
-
-        activites:[
-
-          {
-
             titre:"Veillée d’intégration",
-
-            resp:"RSC"
-
+            resp:"RSC",
+            album:"https://photos.app.goo.gl/JKB5vvmF6FJX8K7B9"
           }
-
         ]
-
       }
-
     ]
-
   },
 
-  /* ================= JOUR 2 ================= */
 
   {
-
     id:2,
-
     date:"Lundi 07 septembre",
+    title:"Ouverture, visite et activités",
 
-    short:"Lundi 07",
-
-    resume:
-
-      "Cérémonie d’ouverture, visite de proximité, Kim’s game, Langabouri et soirée cinéma.",
-
-    album:
-
-      "https://photos.app.goo.gl/YBZgsrV3WPsTFm2u6",
-
-    periodes:[
-
+    periods:[
       {
-
-        nom:"Matin",
-
-        activites:[
-
+        name:"Matin",
+        icon:"☀️",
+        activities:[
           {
-
             titre:"Cérémonie d’ouverture",
-
-            resp:"Popotier"
-
+            resp:"Popotier",
+            album:"https://photos.app.goo.gl/YBZgsrV3WPsTFm2u6"
           },
-
           {
-
             titre:"Visite de proximité",
-
-            resp:"Cheikh"
-
+            resp:"Cheikh",
+            album:"https://photos.app.goo.gl/YBZgsrV3WPsTFm2u6"
           }
-
         ]
-
       },
 
       {
-
-        nom:"Après-midi",
-
-        activites:[
-
+        name:"Après-midi",
+        icon:"🌤️",
+        activities:[
           {
-
             titre:"Kim’s game",
-
-            resp:"Momo SOW"
-
+            resp:"Momo SOW",
+            album:"https://photos.app.goo.gl/YBZgsrV3WPsTFm2u6"
           },
-
           {
-
             titre:"Langabouri",
-
-            resp:"Jules NIANG"
-
+            resp:"Jules NIANG",
+            album:"https://photos.app.goo.gl/YBZgsrV3WPsTFm2u6"
           }
-
         ]
-
       },
 
       {
-
-        nom:"Soir",
-
-        activites:[
-
+        name:"Soir",
+        icon:"🌙",
+        activities:[
           {
-
             titre:"Soirée cinéma",
-
-            resp:"Ass KEITA"
-
+            resp:"Ass KEITA",
+            album:"https://photos.app.goo.gl/YBZgsrV3WPsTFm2u6"
           },
-
           {
-
             titre:"T-débat : technologie et scoutisme",
-
-            resp:"Ndèye BA"
-
+            resp:"Ndèye BA",
+            album:"https://photos.app.goo.gl/YBZgsrV3WPsTFm2u6"
           }
-
         ]
-
       }
-
     ]
-
   },
 
-  /* ================= JOUR 3 ================= */
 
   {
-
     id:3,
-
     date:"Mardi 08 septembre",
+    title:"Amitié, leadership et grands jeux",
 
-    short:"Mardi 08",
-
-    resume:
-
-      "Arbre de l’amitié, brelage, leadership, rôle du maodo, queue de lion, jeu de pistes et enquête impossible.",
-
-    album:
-
-      "https://photos.app.goo.gl/VLdJKShK8VYFycwt6",
-
-    periodes:[
-
+    periods:[
       {
-
-        nom:"Matin",
-
-        activites:[
-
+        name:"Matin",
+        icon:"☀️",
+        activities:[
           {
-
             titre:"ATM arbre de l’amitié",
-
-            resp:"Mame Diarra"
-
+            resp:"Mame Diarra",
+            album:"https://photos.app.goo.gl/VLdJKShK8VYFycwt6"
           },
-
           {
-
             titre:"Brelage",
-
-            resp:"Popotier"
-
+            resp:"Popotier",
+            album:"https://photos.app.goo.gl/VLdJKShK8VYFycwt6"
           },
-
           {
-
             titre:"Débat sur le leadership",
-
-            resp:"Amadou"
-
+            resp:"Amadou",
+            album:"https://photos.app.goo.gl/VLdJKShK8VYFycwt6"
           },
-
           {
-
             titre:"Le rôle du maodo dans la communauté",
-
-            resp:"Mame Bou"
-
+            resp:"Mame Bou",
+            album:"https://photos.app.goo.gl/VLdJKShK8VYFycwt6"
           }
-
         ]
-
       },
 
       {
-
-        nom:"Après-midi",
-
-        activites:[
-
+        name:"Après-midi",
+        icon:"🌤️",
+        activities:[
           {
-
             titre:"Queue de lion",
-
-            resp:"Mamy DIOP"
-
+            resp:"Mamy DIOP",
+            album:"https://photos.app.goo.gl/VLdJKShK8VYFycwt6"
           },
-
           {
-
             titre:"Jeu de pistes",
-
-            resp:"Alou"
-
+            resp:"Alou",
+            album:"https://photos.app.goo.gl/VLdJKShK8VYFycwt6"
           },
-
           {
-
             titre:"Enquête impossible",
-
-            resp:"Pape Mar"
-
+            resp:"Pape Mar",
+            album:"https://photos.app.goo.gl/VLdJKShK8VYFycwt6"
           }
-
         ]
-
       },
 
       {
-
-        nom:"Soir",
-
-        activites:[
-
+        name:"Soir",
+        icon:"🌙",
+        activities:[
           {
-
             titre:"Veillée jeux",
-
-            resp:"RSC"
-
+            resp:"RSC",
+            album:"https://photos.app.goo.gl/VLdJKShK8VYFycwt6"
           }
-
         ]
-
       }
-
     ]
-
   },
 
-  /* ================= JOUR 4 ================= */
 
   {
-
     id:4,
-
     date:"Mercredi 09 septembre",
+    title:"JOJ, technologie et baignade",
 
-    short:"Mercredi 09",
-
-    resume:
-
-      "Jeux des villes olympiques, journal de camp, Génération Tech et baignade plage.",
-
-    albumMatin:
-
-      "https://photos.app.goo.gl/W9GkvTXGcxC2oFag7",
-
-    album:
-
-      "https://photos.app.goo.gl/wEU59rj1bSejfK796",
-
-    periodes:[
-
+    periods:[
       {
-
-        nom:"Matin",
-
-        activites:[
-
+        name:"Matin",
+        icon:"☀️",
+        activities:[
           {
-
             titre:"Jeux des villes olympiques",
-
-            resp:"Khalil"
-
+            resp:"Khalil",
+            album:"https://photos.app.goo.gl/W9GkvTXGcxC2oFag7"
           },
-
           {
-
             titre:"ATM journal de camp",
-
-            resp:"Chérif"
-
+            resp:"Chérif",
+            album:"https://photos.app.goo.gl/W9GkvTXGcxC2oFag7"
           },
-
           {
-
-            titre:
-
-              "Génération Tech : « IA, école et monde professionnel »",
-
-            resp:"Badara"
-
+            titre:"Génération Tech : IA, école et monde professionnel",
+            resp:"Badara",
+            album:"https://photos.app.goo.gl/W9GkvTXGcxC2oFag7"
           }
-
         ]
-
       },
 
       {
-
-        nom:"Après-midi",
-
-        activites:[
-
+        name:"Après-midi",
+        icon:"🌊",
+        activities:[
           {
-
             titre:"Baignade plage",
-
-            resp:"Pape Mar"
-
+            resp:"Pape Mar",
+            album:"https://photos.app.goo.gl/wEU59rj1bSejfK796"
           }
-
         ]
-
       },
 
       {
-
-        nom:"Soir",
-
-        activites:[
-
+        name:"Soir",
+        icon:"💻",
+        activities:[
           {
-
             titre:"Veillée technologie",
-
-            resp:"Ndèye BA"
-
+            resp:"Ndèye BA",
+            album:"https://photos.app.goo.gl/wEU59rj1bSejfK796"
           }
-
         ]
-
       }
-
     ]
-
   },
 
-  /* ================= JOUR 5 ================= */
 
   {
-
     id:5,
-
     date:"Jeudi 10 septembre",
+    title:"Exploration, nature et savoir-faire",
 
-    short:"Jeudi 10",
-
-    resume:
-
-      "Visite Sapeur-pompier, exploration, perlage JOJ et randonnées en forêt de Mbour.",
-
-    album:
-
-      "https://photos.app.goo.gl/aY1hV1kzNZRzixtdA",
-
-    periodes:[
-
+    periods:[
       {
-
-        nom:"Matin",
-
-        activites:[
-
+        name:"Matin",
+        icon:"☀️",
+        activities:[
           {
-
             titre:"Visite Sapeur-pompier",
-
-            resp:"Mame Bou"
-
+            resp:"Mame Bou",
+            album:"https://photos.app.goo.gl/aY1hV1kzNZRzixtdA"
           },
-
           {
-
             titre:"Exploration",
-
-            resp:"Woly"
-
+            resp:"Woly",
+            album:"https://photos.app.goo.gl/aY1hV1kzNZRzixtdA"
           },
-
           {
-
-            titre:"Randonnée Nature — Forêt Mbour",
-
-            resp:"Chérif"
-
-          }
-
-        ]
-
-      },
-
-      {
-
-        nom:"Après-midi",
-
-        activites:[
-
-          {
-
             titre:"ATM perlage JOJ",
+            resp:"Mame Diarra",
+            album:"https://photos.app.goo.gl/aY1hV1kzNZRzixtdA"
+          }
+        ]
+      },
 
-            resp:"Mame Diarra"
-
-          },
-
+      {
+        name:"Après-midi",
+        icon:"🌳",
+        activities:[
           {
-
-            titre:"Exploration",
-
-            resp:"Woly"
-
-          },
-
-          {
-
             titre:"Randonnée Nature — Forêt Mbour",
-
-            resp:"Chérif"
-
+            resp:"Chérif",
+            album:"https://photos.app.goo.gl/aY1hV1kzNZRzixtdA"
+          },
+          {
+            titre:"Evaluation exploration",
+            resp:"RSC",
+            album:"https://photos.app.goo.gl/aY1hV1kzNZRzixtdA"
+          },
+          {
+            titre:"Evaluation randonnée",
+            resp:"RSC",
+            album:"https://photos.app.goo.gl/aY1hV1kzNZRzixtdA"
           }
-
         ]
-
       },
 
       {
-
-        nom:"Soir",
-
-        activites:[
-
+        name:"Soir",
+        icon:"🌙",
+        activities:[
           {
-
             titre:"Veillée conte",
-
-            resp:"RSC"
-
-          },
-
-          {
-
-            titre:"Évaluation exploration",
-
-            resp:"RSC"
-
-          },
-
-          {
-
-            titre:"Évaluation randonnée",
-
-            resp:"RSC"
-
+            resp:"RSC",
+            album:"https://photos.app.goo.gl/aY1hV1kzNZRzixtdA"
           }
-
         ]
-
       }
-
     ]
-
   },
 
-  /* ================= JOUR 6 ================= */
 
   {
-
     id:6,
-
     date:"Vendredi 11 septembre",
+    title:"Valeurs scoutes, chant et secours",
 
-    short:"Vendredi 11",
-
-    resume:
-
-      "Classe de chant Kassak, leadership, relais tuyau, valeurs scoutes et gestes de secours.",
-
-    album:
-
-      "https://photos.app.goo.gl/aY1hV1kzNZRzixtdA",
-
-    periodes:[
-
+    periods:[
       {
-
-        nom:"Matin",
-
-        activites:[
-
+        name:"Matin",
+        icon:"☀️",
+        activities:[
           {
-
-            titre:"Classe de chant Kassak",
-
-            resp:"Déguène"
-
+            titre:"Classe de chant kassak",
+            resp:"Déguène",
+            album:"https://photos.app.goo.gl/aY1hV1kzNZRzixtdA"
           },
-
           {
-
             titre:"Débat sur le leadership",
-
-            resp:"Amadou"
-
-          }
-
-        ]
-
-      },
-
-      {
-
-        nom:"Après-midi",
-
-        activites:[
-
+            resp:"Amadou",
+            album:"https://photos.app.goo.gl/aY1hV1kzNZRzixtdA"
+          },
           {
-
             titre:"Relais tuyau",
+            resp:"Amina",
+            album:"https://photos.app.goo.gl/aY1hV1kzNZRzixtdA"
+          }
+        ]
+      },
 
-            resp:"Amina"
-
-          },
-
+      {
+        name:"Après-midi",
+        icon:"🌤️",
+        activities:[
           {
-
             titre:"Ateliers sur les valeurs scoutes",
-
-            resp:"Doudou, Amina, Mame Bou, Baye Fall"
-
+            resp:"Doudou, Amina, Mame Bou, Baye Fall",
+            album:"https://photos.app.goo.gl/aY1hV1kzNZRzixtdA"
           },
-
           {
-
             titre:"Gestes de secours d’urgence",
-
-            resp:"Momo Sow"
-
+            resp:"Momo Sow",
+            album:"https://photos.app.goo.gl/aY1hV1kzNZRzixtdA"
           }
-
         ]
-
       },
 
       {
-
-        nom:"Soir",
-
-        activites:[
-
+        name:"Soir",
+        icon:"🌙",
+        activities:[
           {
-
             titre:"Veillée Kassak",
-
-            resp:"Momo SOW"
-
+            resp:"Momo SOW",
+            album:"https://photos.app.goo.gl/aY1hV1kzNZRzixtdA"
           }
-
         ]
-
       }
-
     ]
-
   },
 
-  /* ================= JOUR 7 ================= */
 
   {
-
     id:7,
-
     date:"Samedi 12 septembre",
+    title:"Olympiades et fête des couleurs",
 
-    short:"Samedi 12",
-
-    resume:
-
-      "Lancement des olympiades JOJ, fête des couleurs et jeux de nuit.",
-
-    album:
-
-      "https://photos.app.goo.gl/czTxwb9YKJ8B1PYA6",
-
-    periodes:[
-
+    periods:[
       {
-
-        nom:"Matin",
-
-        activites:[
-
+        name:"Programme",
+        icon:"🏅",
+        activities:[
           {
-
-            titre:
-
-              "Cérémonie de lancement des olympiades JOJ",
-
-            resp:"Bougouss"
-
-          }
-
-        ]
-
-      },
-
-      {
-
-        nom:"Après-midi",
-
-        activites:[
-
-          {
-
-            titre:"Fête des couleurs",
-
-            resp:"Woly"
-
-          }
-
-        ]
-
-      },
-
-      {
-
-        nom:"Soir",
-
-        activites:[
-
-          {
-
-            titre:"Jeux de nuits",
-
-            resp:"Ass KEITA"
-
-          }
-
-        ]
-
-      }
-
-    ]
-
-  },
-
-  /* ================= JOUR 8 ================= */
-
-  {
-
-    id:8,
-
-    date:"Dimanche 13 septembre",
-
-    short:"Dimanche 13",
-
-    resume:
-
-      "Olympiades, ambiance Année 2000 et veillée culturelle.",
-
-    album:
-
-      "https://photos.app.goo.gl/rVGEW3t8FGtF5bx27",
-
-    periodes:[
-
-      {
-
-        nom:"Matin",
-
-        activites:[
-
-          {
-
-            titre:"Olympiades",
-
-            resp:"Youssou"
-
-          }
-
-        ]
-
-      },
-
-      {
-
-        nom:"Après-midi",
-
-        activites:[
-
-          {
-
-            titre:"Année 2000",
-
-            resp:"Mamy Diallo"
-
-          }
-
-        ]
-
-      },
-
-      {
-
-        nom:"Soir",
-
-        activites:[
-
-          {
-
-            titre:"Veillée culturelle",
-
-            resp:"Pape Fall"
-
-          }
-
-        ]
-
-      }
-
-    ]
-
-  },
-
-  /* ================= JOUR 9 ================= */
-
-  {
-
-    id:9,
-
-    date:"Lundi 14 septembre",
-
-    short:"Lundi 14",
-
-    resume:
-
-      "Olympiades, match de gala et chasse aux trésors.",
-
-    album:
-
-      "https://photos.app.goo.gl/kpUyzQzUweWnPvGk6",
-
-    periodes:[
-
-      {
-
-        nom:"Matin",
-
-        activites:[
-
-          {
-
-            titre:"Olympiades",
-
-            resp:"Youssou"
-
-          }
-
-        ]
-
-      },
-
-      {
-
-        nom:"Après-midi",
-
-        activites:[
-
-          {
-
-            titre:"Match de gala",
-
-            resp:"Amadou"
-
-          }
-
-        ]
-
-      },
-
-      {
-
-        nom:"Soir",
-
-        activites:[
-
-          {
-
-            titre:"Chasse aux trésors",
-
-            resp:"Baye Fall"
-
-          }
-
-        ]
-
-      }
-
-    ]
-
-  },
-
-  /* ================= JOUR 10 ================= */
-
-  {
-
-    id:10,
-
-    date:"Mardi 15 septembre",
-
-    short:"Mardi 15",
-
-    resume:
-
-      "Service communautaire, cérémonie de clôture, camp libre et feu de camp.",
-
-    album:
-
-      "https://photos.app.goo.gl/DnFYMT2AZ9MBpMBa9",
-
-    periodes:[
-
-      {
-
-        nom:"Matin",
-
-        activites:[
-
-          {
-
-            titre:"Service communautaire",
-
-            resp:"Cheikh"
-
+            titre:"Cérémonie de lancement des olympiades JOJ",
+            resp:"Bougouss",
+            album:"https://photos.app.goo.gl/czTxwb9YKJ8B1PYA6"
           },
-
           {
-
-            titre:"Cérémonie de clôture",
-
-            resp:"Popotier"
-
-          }
-
-        ]
-
-      },
-
-      {
-
-        nom:"Après-midi",
-
-        activites:[
-
+            titre:"Fête des couleurs",
+            resp:"Woly",
+            album:"https://photos.app.goo.gl/czTxwb9YKJ8B1PYA6"
+          },
           {
-
-            titre:"Camp libre",
-
-            resp:""
-
+            titre:"Jeux de nuits",
+            resp:"Ass KEITA",
+            album:"https://photos.app.goo.gl/czTxwb9YKJ8B1PYA6"
           }
-
         ]
-
-      },
-
-      {
-
-        nom:"Soir",
-
-        activites:[
-
-          {
-
-            titre:"Feu de camp",
-
-            resp:"Youssou"
-
-          }
-
-        ]
-
       }
-
     ]
-
   },
 
-  /* ================= JOUR 11 ================= */
 
   {
+    id:8,
+    date:"Dimanche 13 septembre",
+    title:"Olympiades, année 2000 et culture",
 
-    id:11,
-
-    date:"Mercredi 16 septembre",
-
-    short:"Mercredi 16",
-
-    resume:
-
-      "Décampement.",
-
-    album:"",
-
-    periodes:[
-
+    periods:[
       {
-
-        nom:"Matin",
-
-        activites:[
-
+        name:"Journée",
+        icon:"🏅",
+        activities:[
           {
-
-            titre:"Décampement",
-
-            resp:"Cheikh"
-
+            titre:"Olympiades",
+            resp:"Youssou",
+            album:"https://photos.app.goo.gl/rVGEW3t8FGtF5bx27"
+          },
+          {
+            titre:"Année 2000",
+            resp:"Mamy Diallo",
+            album:"https://photos.app.goo.gl/rVGEW3t8FGtF5bx27"
           }
-
         ]
-
       },
 
       {
-
-        nom:"Après-midi",
-
-        activites:[]
-
-      },
-
-      {
-
-        nom:"Soir",
-
-        activites:[]
-
+        name:"Soir",
+        icon:"🌙",
+        activities:[
+          {
+            titre:"Veillée culturelle",
+            resp:"Pape Fall",
+            album:"https://photos.app.goo.gl/rVGEW3t8FGtF5bx27"
+          }
+        ]
       }
-
     ]
+  },
 
+
+  {
+    id:9,
+    date:"Lundi 14 septembre",
+    title:"Olympiades, match et chasse aux trésors",
+
+    periods:[
+      {
+        name:"Journée",
+        icon:"🏆",
+        activities:[
+          {
+            titre:"Olympiades",
+            resp:"Youssou",
+            album:"https://photos.app.goo.gl/kpUyzQzUweWnPvGk6"
+          },
+          {
+            titre:"Match de galla",
+            resp:"Amadou",
+            album:"https://photos.app.goo.gl/kpUyzQzUweWnPvGk6"
+          },
+          {
+            titre:"Chasse aux trésors",
+            resp:"Baye Fall",
+            album:"https://photos.app.goo.gl/kpUyzQzUweWnPvGk6"
+          }
+        ]
+      }
+    ]
+  },
+
+
+  {
+    id:10,
+    date:"Mardi 15 septembre",
+    title:"Communauté, clôture et feu de camp",
+
+    periods:[
+      {
+        name:"Journée",
+        icon:"🤝",
+        activities:[
+          {
+            titre:"Service communautaire",
+            resp:"Cheikh",
+            album:"https://photos.app.goo.gl/DnFYMT2AZ9MBpMBa9"
+          },
+          {
+            titre:"Cérémonie de clôture",
+            resp:"Popotier",
+            album:"https://photos.app.goo.gl/DnFYMT2AZ9MBpMBa9"
+          },
+          {
+            titre:"Camp libre",
+            resp:"",
+            album:"https://photos.app.goo.gl/DnFYMT2AZ9MBpMBa9"
+          }
+        ]
+      },
+
+      {
+        name:"Soir",
+        icon:"🔥",
+        activities:[
+          {
+            titre:"Feu de camp",
+            resp:"Youssou",
+            album:"https://photos.app.goo.gl/DnFYMT2AZ9MBpMBa9"
+          }
+        ]
+      }
+    ]
+  },
+
+
+  {
+    id:11,
+    date:"Mercredi 16 septembre",
+    title:"Décampement",
+
+    periods:[
+      {
+        name:"Programme",
+        icon:"🏕️",
+        activities:[
+          {
+            titre:"Décampement",
+            resp:"Cheikh",
+            album:""
+          }
+        ]
+      }
+    ]
   }
 
 ];
 
-/*
 
-==========================================================
+/* =====================================================
+   AFFICHAGE DES JOURS
+===================================================== */
 
-PROTECTION DU TEXTE HTML
+const daysGrid = document.getElementById("daysGrid");
 
-==========================================================
+function renderDays(){
 
-*/
+  daysGrid.innerHTML = "";
 
-function escapeHtml(str){
+  days.forEach(day => {
 
-  return String(str || "")
+    const card = document.createElement("div");
 
-    .replaceAll("&","&amp;")
+    card.className = "day-card";
 
-    .replaceAll("<","&lt;")
+    card.onclick = () => showDay(day.id);
 
-    .replaceAll(">","&gt;")
+    card.innerHTML = `
 
-    .replaceAll('"',"&quot;")
+      <div class="day-number">
+        ${day.id}
+      </div>
 
-    .replaceAll("'","&#039;");
+      <h3>
+        ${escapeHtml(day.date)}
+      </h3>
 
-}
+      <p>
+        ${escapeHtml(day.title)}
+      </p>
 
-/*
+      <span class="day-arrow">
+        Voir le programme →
+      </span>
 
-==========================================================
+    `;
 
-RETOUR À L'ACCUEIL
-
-==========================================================
-
-*/
-
-function showHome(){
-
-  document
-
-    .getElementById("programme")
-
-    .classList
-
-    .add("active");
-
-  document
-
-    .getElementById("dayPage")
-
-    .classList
-
-    .remove("active");
-
-  window.scrollTo({
-
-    top:0,
-
-    behavior:"smooth"
+    daysGrid.appendChild(card);
 
   });
 
 }
 
-/*
 
-==========================================================
-
-AFFICHAGE D'UNE JOURNÉE
-
-==========================================================
-
-*/
+/* =====================================================
+   AFFICHER UN JOUR
+===================================================== */
 
 function showDay(id){
 
-  const day =
+  const day = days.find(d => d.id === id);
 
-    JOURS.find(x => x.id === id);
+  if(!day) return;
 
-  if(!day){
+  document.getElementById("programme").style.display = "block";
 
-    return;
+  document.getElementById("programmeTitle").textContent =
+    `${day.date} — ${day.title}`;
 
-  }
+  const content = document.getElementById("programmeContent");
 
-  const content =
+  content.innerHTML = "";
 
-    document.getElementById("dayContent");
+  day.periods.forEach(period => {
 
-  let html = `
+    const periodDiv = document.createElement("div");
 
-    <div class="day-head">
+    periodDiv.className = "period";
 
-      <div class="badge">
+    let activitiesHTML = "";
 
-        JOUR ${day.id}
+    period.activities.forEach(activity => {
 
-      </div>
+      const hasAlbum =
+        activity.album &&
+        activity.album.trim() !== "";
 
-      <h3>
+      if(hasAlbum){
 
-        ${escapeHtml(day.date)}
-
-      </h3>
-
-      <p>
-
-        ${escapeHtml(day.resume)}
-
-      </p>
-
-      ${
-
-        day.album
-
-        ?
-
-        `
-
-        <a
-
-          class="media-btn"
-
-          href="${day.album}"
-
-          target="_blank"
-
-          rel="noopener"
-
-        >
-
-          📸 Ouvrir l’album photos & vidéos
-
-        </a>
-
-        `
-
-        :
-
-        ""
-
-      }
-
-    </div>
-
-  `;
-
-  html += `
-
-    <div class="timeline">
-
-  `;
-
-  day.periodes.forEach(
-
-    (p,index)=>{
-
-      html += `
-
-        <div class="activity">
-
-          <div class="period">
-
-            ${escapeHtml(p.nom)}
-
-            <small>
-
-              ${
-
-                index === 0
-
-                ? "Activité 1"
-
-                : index === 1
-
-                ? "Activité 2"
-
-                : "Veillée"
-
-              }
-
-            </small>
-
-          </div>
-
-          <div class="items">
-
-      `;
-
-      if(!p.activites.length){
-
-        html += `
-
-          <div class="item">
-
-            <strong>
-
-              Pas d’activité indiquée
-
-            </strong>
-
-          </div>
-
-        `;
-
-      }
-
-      else{
-
-        p.activites.forEach(
-
-          a=>{
-
-            html += `
-
-              <div class="item">
-
-                <strong>
-
-                  ${escapeHtml(a.titre)}
-
-                </strong>
-
-                ${
-
-                  a.resp
-
-                  ?
-
-                  `
-
-                  <div class="responsable">
-
-                    Responsable :
-
-                    ${escapeHtml(a.resp)}
-
-                  </div>
-
-                  `
-
-                  :
-
-                  ""
-
-                }
-
-              </div>
-
-            `;
-
-          }
-
-        );
-
-      }
-
-      if(day.album){
-
-        html += `
+        activitiesHTML += `
 
           <a
-
-            class="media-btn"
-
-            href="${day.album}"
-
+            class="activity"
+            href="${activity.album}"
             target="_blank"
-
-            rel="noopener"
-
+            rel="noopener noreferrer"
           >
 
-            🎥 Photos & vidéos du jour
+            <strong>
+              📸 ${escapeHtml(activity.titre)}
+            </strong>
+
+            ${
+              activity.resp
+              ?
+              `<div class="responsable">
+                Responsable : ${escapeHtml(activity.resp)}
+              </div>`
+              :
+              ""
+            }
+
+            <span class="click-hint">
+              Voir les photos et vidéos →
+            </span>
 
           </a>
 
         `;
 
-      }
+      }else{
 
-      html += `
+        activitiesHTML += `
+
+          <div class="activity">
+
+            <strong>
+              ${escapeHtml(activity.titre)}
+            </strong>
+
+            ${
+              activity.resp
+              ?
+              `<div class="responsable">
+                Responsable : ${escapeHtml(activity.resp)}
+              </div>`
+              :
+              ""
+            }
+
+            <span class="click-hint">
+              📷 Album à venir
+            </span>
 
           </div>
 
-        </div>
+        `;
 
-      `;
+      }
 
-    }
+    });
 
-  );
 
-  html += `
+    periodDiv.innerHTML = `
 
-    </div>
+      <div class="period-title">
 
-  `;
+        <span>
+          ${period.icon}
+        </span>
 
-  content.innerHTML =
+        ${escapeHtml(period.name)}
 
-    html;
+      </div>
 
-  document
+      <div class="activities">
+        ${activitiesHTML}
+      </div>
 
-    .getElementById("programme")
+    `;
 
-    .classList
+    content.appendChild(periodDiv);
 
-    .remove("active");
+  });
 
-  document
 
-    .getElementById("dayPage")
+  /* SCROLL VERS PROGRAMME */
 
-    .classList
+  setTimeout(() => {
 
-    .add("active");
+    document.getElementById("programme")
+      .scrollIntoView({
+        behavior:"smooth",
+        block:"start"
+      });
+
+  },50);
+
+}
+
+
+/* =====================================================
+   FERMER PROGRAMME
+===================================================== */
+
+function closeProgramme(){
+
+  document.getElementById("programme").style.display = "none";
+
+  scrollToDays();
+
+}
+
+
+/* =====================================================
+   SCROLL PROGRAMME
+===================================================== */
+
+function scrollToDays(){
+
+  document.getElementById("jours")
+    .scrollIntoView({
+      behavior:"smooth"
+    });
+
+}
+
+
+/* =====================================================
+   ACCUEIL
+===================================================== */
+
+function goHome(){
 
   window.scrollTo({
-
     top:0,
-
     behavior:"smooth"
-
   });
 
 }
 
-/*
 
-==========================================================
+/* =====================================================
+   RECENSEMENT
+===================================================== */
 
-AFFICHAGE DES JOURS
+function openRecensement(){
 
-==========================================================
-
-*/
-
-function renderDays(){
-
-  const container =
-
-    document.getElementById("days");
-
-  container.innerHTML =
-
-    JOURS.map(
-
-      day => `
-
-        <article
-
-          class="day-card"
-
-          onclick="showDay(${day.id})"
-
-        >
-
-          <span class="day-number">
-
-            ${day.id}
-
-          </span>
-
-          <div class="date">
-
-            ${escapeHtml(day.short)}
-
-          </div>
-
-          <h4>
-
-            ${escapeHtml(day.date)}
-
-          </h4>
-
-          <div class="preview">
-
-            ${escapeHtml(day.resume)}
-
-          </div>
-
-          ${
-
-            day.album
-
-            ?
-
-            `
-
-            <span class="badge">
-
-              📸 Album disponible
-
-            </span>
-
-            `
-
-            :
-
-            `
-
-            <span class="badge">
-
-              Programme
-
-            </span>
-
-            `
-
-          }
-
-        </article>
-
-      `
-
-    )
-
-    .join("");
+  window.open(
+    "https://forms.gle/V5NkMZ98bNjZKRbH8",
+    "_blank",
+    "noopener,noreferrer"
+  );
 
 }
 
-/*
 
-==========================================================
+/* =====================================================
+   SÉCURISER L'AFFICHAGE DU TEXTE
+===================================================== */
 
-LANCEMENT
+function escapeHtml(text){
 
-==========================================================
+  return String(text || "")
+    .replace(/&/g,"&amp;")
+    .replace(/</g,"&lt;")
+    .replace(/>/g,"&gt;")
+    .replace(/"/g,"&quot;")
+    .replace(/'/g,"&#039;");
 
-*/
+}
+
+
+/* =====================================================
+   INITIALISATION
+===================================================== */
 
 renderDays();
 
 </script>
 
 </body>
-
 </html>
