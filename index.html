@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impulsion 26 — Camp de vacances EEDS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#211935;
+    --purple:#4B2E83;
+    --purple-deep:#2F1D57;
+    --gold:#E8AC1E;
+    --gold-deep:#8A6110;
+    --green:#158443;
+    --cream:#FAF6ED;
+    --paper:#FFFFFF;
+    --line:#E4DECD;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Work Sans', sans-serif;
+    line-height:1.5;
+  }
+  h1,h2,h3,.display{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:700;
+    margin:0;
+  }
+  a{color:inherit;}
+
+  /* NAV */
+  .nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:16px 24px;
+    background:var(--purple-deep);
+  }
+  .nav-brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:var(--cream);
+  }
+  .nav-mark{
+    width:36px;height:36px;
+    display:flex;align-items:center;justify-content:center;
+    flex-shrink:0;
+  }
+  .nav-mark svg{width:100%;height:100%;fill:var(--gold);}
+  .nav-brand span{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:17px;}
+  .nav-right{
+    display:flex;
+    align-items:center;
+    gap:14px;
+  }
+  .nav-tag{
+    color:var(--gold);
+    font-size:13px;
+  }
+  .district-logo{
+    height:34px;
+    display:flex;align-items:center;justify-content:center;
+    flex-shrink:0;
+  }
+  .district-logo img{height:100%;width:auto;display:block;}
+
+  /* HERO */
+  .hero{
+    background:var(--purple);
+    color:var(--cream);
+    padding:56px 24px 64px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero-inner{max-width:760px;margin:0 auto;}
+  .hero-kicker{
+    color:var(--gold);
+    font-size:14px;
+    margin-bottom:8px;
+  }
+  .hero h1{
+    font-size:clamp(32px,6vw,52px);
+    line-height:1.05;
+    margin-bottom:6px;
+  }
+  .hero-sub{
+    color:#D9CFF0;
+    font-size:16px;
+    max-width:46ch;
+    margin-top:10px;
+  }
+
+  /* TODAY CARD */
+  .today{
+    max-width:760px;
+    margin:-36px auto 0;
+    padding:0 24px;
+  }
+  .today-card{
+    background:var(--paper);
+    border-radius:16px;
+    padding:26px 26px 22px;
+    box-shadow:0 12px 30px rgba(43,25,79,0.18);
+  }
+  .today-date{
+    display:inline-block;
+    background:var(--gold);
+    color:var(--purple-deep);
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:600;
+    font-size:14px;
+    padding:6px 14px;
+    border-radius:999px;
+    margin-bottom:16px;
+  }
+  .moments{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+  .moment{
+    display:grid;
+    grid-template-columns:110px 1fr;
+    gap:14px;
+    padding-bottom:16px;
+    border-bottom:1px solid var(--line);
+  }
+  .moment:last-child{border-bottom:none;padding-bottom:0;}
+  .moment-label{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:600;
+    color:var(--purple);
+    font-size:14px;
+  }
+  .moment-text{
+    font-size:15px;
+    color:var(--ink);
+  }
+
+  /* SECTION */
+  section{
+    max-width:900px;
+    margin:0 auto;
+    padding:56px 24px;
+  }
+  .section-head{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    margin-bottom:24px;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .section-head h2{font-size:26px;}
+  .section-head p{
+    color:#5B5470;
+    font-size:14px;
+    margin:0;
+  }
+
+  /* DAY GRID */
+  .days{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:18px;
+  }
+  .day-card{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .day-card.today-marker{
+    border:2px solid var(--gold);
+  }
+  .day-top{
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .day-num{
+    width:32px;height:32px;
+    border-radius:50%;
+    background:var(--purple);
+    color:var(--cream);
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:600;
+    font-size:14px;
+    display:flex;align-items:center;justify-content:center;
+    flex-shrink:0;
+  }
+  .day-date{
+    font-family:'Space Grotesk',sans-serif;
+    font-weight:600;
+    font-size:15px;
+  }
+  .day-activities{
+    font-size:13px;
+    color:#5B5470;
+    flex-grow:1;
+  }
+  .day-actions{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+  }
+  .btn{
+    flex:1;
+    text-align:center;
+    padding:10px 12px;
+    border-radius:9px;
+    font-size:13px;
+    font-weight:600;
+    text-decoration:none;
+    cursor:pointer;
+    border:none;
+    font-family:'Work Sans',sans-serif;
+  }
+  .btn-add{
+    background:var(--gold);
+    color:var(--purple-deep);
+  }
+  .btn-view{
+    background:var(--cream);
+    color:var(--purple);
+    border:1px solid var(--line);
+  }
+  .btn-pending{
+    background:var(--cream);
+    color:#8A8398;
+    border:1px dashed var(--line);
+    flex:1 1 100%;
+    text-align:center;
+    padding:10px 12px;
+    border-radius:9px;
+    font-size:13px;
+  }
+
+  /* FOOTER */
+  footer{
+    background:var(--purple-deep);
+    color:#C9BEE6;
+    padding:40px 24px;
+    text-align:center;
+    font-size:13px;
+  }
+  footer .hashtags{
+    color:var(--gold);
+    margin-top:10px;
+  }
+  footer .footer-title{
+    color:var(--cream);
+    font-family:'Space Grotesk',sans-serif;
+    font-size:16px;
+    margin-bottom:8px;
+  }
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <div class="nav-brand">
+    <div class="nav-mark">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 4 C36 22 36 46 50 60 C64 46 64 22 50 4 Z"/>
+        <g transform="rotate(-55 50 40)"><path d="M50 4 C36 22 36 46 50 60 C64 46 64 22 50 4 Z"/></g>
+        <g transform="rotate(55 50 40)"><path d="M50 4 C36 22 36 46 50 60 C64 46 64 22 50 4 Z"/></g>
+        <rect x="28" y="58" width="44" height="9" rx="2"/>
+        <path d="M22 62 C16 66 16 72 22 74 C24 70 24 66 22 62 Z"/>
+        <path d="M78 62 C84 66 84 72 78 74 C76 70 76 66 78 62 Z"/>
+        <path d="M42 67 L58 67 L50 96 Z"/>
+      </svg>
+    </div>
+    <span>Impulsion 26</span>
+  </div>
+  <div class="nav-right">
+    <div class="nav-tag">EEDS · District de Rufisque</div>
+    <div class="district-logo" id="district-logo">
+      <img src="logo-district.png" alt="Éclaireurs District de Rufisque">
+    </div>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-kicker">Camp de vacances 2026 · Saly / Mbour</div>
+    <h1>Impulsion 26</h1>
+    <p class="hero-sub">Le programme du jour et toutes les photos et vidéos du camp, jour après jour.</p>
+  </div>
+</div>
+
+<div class="today">
+  <div class="today-card" id="today-card">
+    <!-- rempli par JS depuis PROGRAMME_DU_JOUR -->
+  </div>
+</div>
+
+<section>
+  <div class="section-head">
+    <h2>Photos et vidéos par jour</h2>
+    <p>Un album par journée de camp</p>
+  </div>
+  <div class="days" id="days-grid">
+    <!-- rempli par JS depuis JOURS -->
+  </div>
+</section>
+
+<footer>
+  <div class="footer-title">Impulsion 26</div>
+  <div>Éclaireuses et Éclaireurs du Sénégal · District de Rufisque</div>
+  <div class="hashtags">#roadtosaly #demrek #rioscout #eeds #scout</div>
+</footer>
+
+<script>
+// ------------------------------------------------------------------
+// PROGRAMME DU JOUR : à mettre à jour chaque jour
+// ------------------------------------------------------------------
+const PROGRAMME_DU_JOUR = {
+  date: "Mercredi 9 septembre",
+  moments: [
+    { label: "Matin", text: "Jeux des villes olympiques, ATM journal de camp, Génération tech" },
+    { label: "Après-midi", text: "Baignade plage + Scout Time" },
+    { label: "Soir", text: "Veillée Technologie" }
+  ]
+};
+
+// ------------------------------------------------------------------
+// JOURS DU CAMP : un album Google Photos par jour.
+// Remplir "album" avec le lien de partage de l'album (mode collaboratif).
+// Laisser vide ("") tant que l'album n'est pas encore créé.
+// ------------------------------------------------------------------
+const JOURS = [
+  { num: 1, date: "Dim 6 sept", activities: "Arrivée, installation, ouverture du camp", album: "" },
+  { num: 2, date: "Lun 7 sept", activities: "Visite de proximité, Kim's game, Langabouri", album: "" },
+  { num: 3, date: "Mar 8 sept", activities: "ATM arbre de l'amitié, brelage, débat leadership, Queue de lion, jeu de pistes, Scout Time, veillée jeux", album: "" },
+  { num: 4, date: "Mer 9 sept", activities: "Jeux des villes olympiques, ATM journal de camp, Génération tech, baignade plage, Scout Time, veillée technologie", album: "", isToday: true },
+  { num: 5, date: "Jeu 10 sept", activities: "Programme à venir", album: "" },
+  { num: 6, date: "Ven 11 sept", activities: "Programme à venir", album: "" },
+  { num: 7, date: "Sam 12 sept", activities: "Programme à venir", album: "" },
+  { num: 8, date: "Dim 13 sept", activities: "Programme à venir", album: "" },
+  { num: 9, date: "Lun 14 sept", activities: "Programme à venir", album: "" },
+  { num: 10, date: "Mar 15 sept", activities: "Programme à venir", album: "" },
+  { num: 11, date: "Mer 16 sept", activities: "Clôture du camp", album: "" }
+];
+
+function renderToday(){
+  const el = document.getElementById('today-card');
+  const momentsHtml = PROGRAMME_DU_JOUR.moments.map(m =>
+    `<div class="moment">
+      <div class="moment-label">${m.label}</div>
+      <div class="moment-text">${m.text}</div>
+    </div>`
+  ).join('');
+  el.innerHTML = `
+    <span class="today-date">${PROGRAMME_DU_JOUR.date}</span>
+    <div class="moments">${momentsHtml}</div>
+  `;
+}
+
+function renderDays(){
+  const grid = document.getElementById('days-grid');
+  grid.innerHTML = JOURS.map(j => {
+    const actions = j.album
+      ? `<div class="day-actions">
+           <a class="btn btn-add" href="${j.album}?pli=1" target="_blank" rel="noopener">Ajouter des photos</a>
+           <a class="btn btn-view" href="${j.album}" target="_blank" rel="noopener">Voir l'album</a>
+         </div>`
+      : `<div class="btn-pending">Album à venir</div>`;
+    return `
+      <div class="day-card ${j.isToday ? 'today-marker' : ''}">
+        <div class="day-top">
+          <div class="day-num">${j.num}</div>
+          <div class="day-date">${j.date}</div>
+        </div>
+        <div class="day-activities">${j.activities}</div>
+        ${actions}
+      </div>
+    `;
+  }).join('');
+}
+
+renderToday();
+renderDays();
+</script>
+
+</body>
+</html>
